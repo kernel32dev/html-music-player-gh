@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html Media Player</title>
+    <link rel="stylesheet" href="style.css">
+	<link rel="icon" href="favicon.ico">
+    <script src="script.js"></script>
+    <script src="library.js"></script>
+</head>
+<body class="loading">
+    <div id="pldlg">
+        <div id="pledit">
+            <input id="editname" type="text">
+            <div class="dlgbuttonrow">
+                <div class="dlgbutton" id="editok">Confirm</div>
+                <div class="dlgbutton" id="editdel" style="color:rgb(230, 0, 0);">Delete</div>
+            </div>
+        </div>
+        <div id="plconfirm">
+            <div id="conflbl" class="dlglabel"></div>
+            <div class="dlgbuttonrow">
+                <div class="dlgbutton" id="confok" style="color:rgb(230, 0, 0);">Yes, Delete</div>
+                <div class="dlgbutton" id="confcanc">No, Cancel</div>
+            </div>
+        </div>
+    </div>
+    <div id="all" class="plempty nolocal hide-lyrics">
+    <!--<div id="all">-->
+        <div id="playlist">
+            <div id="plname"></div>
+            <div id="queue"></div>
+            <div id="plctl">
+                <div id="ctledit" class="button">&#xf1c0;</div>
+                <div style="flex-grow: 1;"></div>
+                <div id="ctlprevious" class="button">&#xf04a;</div>
+                <div id="ctlshuffle" class="button">&#xf074;</div>
+                <div id="ctlnext" class="button">&#xf04e;</div>
+                <div style="flex-grow: 1;"></div>
+                <div id="ctlclear" class="button">&#xf04d;</div>
+            </div>
+        </div>
+        <div id="main">
+            <div id="filesystem" tabindex="0"></div>
+            <div id="lyrics">
+                <div id="lyricstext"></div>
+                <div id="lyricsclose"><div id="lyricsclosebtn" class="button">&#xf03a;</div></div>
+            </div>
+            <div id="vcontrols">
+                <div id="vcontrolsa">
+                    <div id="vcurrent"></div>
+                    <div id="vbuttons">
+                        <div id="ctlloop" class="button">&#xf01e;</div>
+                        <div id="ctleject" class="button">&#xf052;</div>
+                    </div>
+                </div>
+                <div id="vcontrolsb" style="--vr:50%">
+                    <div id="volumenums">
+                        <div id="localnum">0%</div>
+                        <div id="globalnum">100%</div>
+                    </div>
+                    <div id="volumebars">
+                        <div id="localbar" class="sliderdiv" style="--v:0%">
+                            <div class="slider">
+                                <div class="knob"></div>
+                            </div>
+                        </div>
+                        <div id="globalbar" class="sliderdiv" style="--v:0%">
+                            <div class="slider">
+                                <div class="knob"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="bar" class="readonly">
+        <div id="button" class="button" class="readonly">&#xf04b;</div>
+        <div id="timestamp">0:00 / 0:00</div>
+        <div id="mainslider" class="sliderdiv" style="--v:0%">
+            <div class="slider">
+                <div class="knob"></div>
+            </div>
+        </div>
+        <!--<div id="ctlmenu" class="button">&#xf142;</div>-->
+    </div>
+    <div id="videoarea">
+    <div id="videotop">
+        <div id="videoprevious" class="button">&#xf04a;</div>
+        <div id="videotitle">Título deste video</div>
+        <div id="videonext" class="button">&#xf04e;</div>
+    </div>
+    <div id="video"></div>
+    </div>
+</body>
+</html>
